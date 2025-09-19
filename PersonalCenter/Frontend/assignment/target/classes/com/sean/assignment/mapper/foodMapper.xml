@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sean.assignment.mapper.foodMapper">
+    <select id="list" resultType="com.sean.assignment.pojo.Food">
+        Select *
+        from foods
+        <where>
+            <if test="email != null">
+                email = #{email}
+            </if>
+            <if test="name != null">
+                AND name LIKE CONCAT('%',#{name},'%')
+            </if>
+        </where>
+    </select>
+    <select id="hasFood" parameterType="com.sean.assignment.pojo.Food" resultType="boolean">
+        SELECT CASE WHEN COUNT(*) > 0 THEN TRUE ELSE FALSE END
+        FROM foods where name = #{name}  AND email = #{email}
+    </select>
+
+    <update id="update" parameterType="com.sean.assignment.pojo.Food">
+        update foods
+        set email = #{email},
+        name = #{name},
+        material = #{material},
+        <if test="img != null">
+            img = #{img},
+        </if>
+        description = #{description}
+        where email = #{email} and name = #{name}
+    </update>
+</mapper>

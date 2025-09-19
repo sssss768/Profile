@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "com.sean.assignment.utils.JwtUtils",
+      "sourceType": "com.sean.assignment.utils.JwtUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.user-secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.sean.assignment.utils.JwtUtils"
+    },
+    {
+      "name": "jwt.user-token-name",
+      "type": "java.lang.String",
+      "sourceType": "com.sean.assignment.utils.JwtUtils"
+    },
+    {
+      "name": "jwt.user-ttl",
+      "type": "java.lang.Long",
+      "sourceType": "com.sean.assignment.utils.JwtUtils"
+    }
+  ],
+  "hints": []
+}

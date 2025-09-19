@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sean.assignment.mapper.userMapper">
+    <select id="list" resultType="com.sean.assignment.pojo.User">
+        Select *
+        from user
+        <where>
+            <if test="email != null">
+               email = #{email}
+            </if>
+        </where>
+    </select>
+    <update id="update" parameterType="com.sean.assignment.pojo.User">
+        update user
+        set userName = #{userName},
+        email = #{email},
+        password = #{password},
+        realName = #{realName},
+        gender = #{gender},
+        <if test="img != null">
+            img = #{img},
+        </if> <!-- 只有 img 不为空时才更新 -->
+        phone = #{phone},
+        office = #{office},
+        officeAdress = #{officeAdress},
+        `desc` = #{desc}
+        where email = #{email}
+    </update>
+
+    <delete id="delete" >
+        delete from user
+        where userName in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

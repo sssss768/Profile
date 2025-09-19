@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sean.assignment.mapper.sceneryMapper">
+    <select id="list" resultType="com.sean.assignment.pojo.Scenery">
+        Select *
+        from scenery
+        <where>
+            <if test="email != null">
+                email = #{email}
+            </if>
+            <if test="name != null">
+                AND name LIKE CONCAT('%',#{name},'%')
+            </if>
+        </where>
+    </select>
+    <select id="hasScenery" parameterType="com.sean.assignment.pojo.Scenery" resultType="boolean">
+        SELECT CASE WHEN COUNT(*) > 0 THEN TRUE ELSE FALSE END
+        FROM scenery where name = #{name}  AND email = #{email}
+    </select>
+
+    <update id="update" parameterType="com.sean.assignment.pojo.Scenery">
+        update scenery
+        set email = #{email},
+        name = #{name},
+        address = #{address},
+        <if test="img != null">
+            img = #{img},
+        </if>
+        description = #{description}
+        where email = #{email} and name = #{name}
+    </update>
+</mapper>

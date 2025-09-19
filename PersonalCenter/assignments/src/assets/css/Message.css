@@ -1,0 +1,41 @@
+@keyframes toBot {
+	0%,
+	100% {
+		top: -10vh;
+		opacity: 0;
+	}
+	20%,
+	60% {
+		top: 5vh;
+		opacity: 1;
+	}
+}
+
+.msg-basic {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 3vh;
+	user-select: none;
+	padding: 2vh;
+	min-height: 3vh;
+	border-radius: 10px;
+	animation: toBot 2.5s 1 forwards;
+	font-size: max(1vw, 1rem);
+	z-index: 99;
+	background-color: var(--overall-background-color);
+	border: 1px solid var(--color-box-shadow);
+}
+
+.msg-success {
+	color: rgb(80, 177, 80);
+}
+
+.msg-error {
+	color: rgb(236, 79, 79);
+}
+
+.msg-info {
+	color: rgb(76, 76, 76);
+}

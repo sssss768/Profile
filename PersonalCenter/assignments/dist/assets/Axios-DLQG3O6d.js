@@ -1,0 +1,1 @@
+import{a as r}from"./axios-upsvKRUO.js";const s=r.create();s.interceptors.request.use(e=>{const t=localStorage.getItem("token");return t&&Object.assign(e.headers,{token:t}),e},e=>Promise.reject(e));export{s as a};

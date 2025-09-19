@@ -1,0 +1,11 @@
+/* 本CSS文件主要用于存放变量 */
+:root {
+	--overall-background-color: #fff;
+	--solid-color: rgba(60, 60, 67, 0.12);
+	--font-main-color: rgb(78, 78, 82);
+	--hover-color: rgb(139, 194, 75);
+	--font-weight: 300;
+	--scroll-block-color: rgba(60, 60, 67, 0.3);
+	--color-box-shadow: rgba(200, 201, 204, 0.6);
+	--theme-now: #fff;
+}
