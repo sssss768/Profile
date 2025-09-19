@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stu.view.controller.LoginController">
+   <children>
+      <Label layoutX="250.0" layoutY="40.0" text="Login" textFill="#8b1414de">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="157.0" layoutY="130.0" text="UserName:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="159.0" layoutY="200.0" text="PassWord:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameText" layoutX="261.0" layoutY="130.0" promptText="Please input your username" />
+      <TextField fx:id="passwordText" layoutX="261.0" layoutY="200.0" promptText="Please input your password" />
+      <CheckBox fx:id="adminRadio" layoutX="331.0" layoutY="256.0" mnemonicParsing="false" onAction="#selectAdminRadio" text="Teacher" />
+      <CheckBox fx:id="userRadio" layoutX="237.0" layoutY="256.0" mnemonicParsing="false" onAction="#selectUserAction" text="Student" />
+      <Button layoutX="260.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="41.0" prefWidth="142.0" style="-fx-background-color: green;" text="Login" textFill="#2e4c7d">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button layoutX="260.0" layoutY="339.0" mnemonicParsing="false" onAction="#backAction" prefHeight="46.0" prefWidth="142.0" style="-fx-background-color: yellow;" text="Back" textFill="#2e4c7d">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

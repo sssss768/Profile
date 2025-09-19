@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stu.view.controller.AdminHomeController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="-4.0" prefHeight="400.0" prefWidth="611.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="TeacherInfo">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="303.0" prefWidth="600.0">
+                     <children>
+                        <Label layoutX="186.0" layoutY="22.0" prefHeight="42.0" prefWidth="239.0" text="    TeacherInfo">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="176.0" layoutY="74.0" prefHeight="31.0" prefWidth="66.0" text="       Name:" />
+                        <Label layoutX="176.0" layoutY="130.0" prefHeight="31.0" prefWidth="66.0" text="      Phone:" />
+                        <TextField fx:id="name" layoutX="242.0" layoutY="78.0" promptText="edit your name" />
+                        <TextField fx:id="phone" layoutX="242.0" layoutY="134.0" promptText="edit your phone" />
+                        <Button layoutX="248.0" layoutY="203.0" mnemonicParsing="false" onAction="#updateInfoAction" prefHeight="39.0" prefWidth="133.0" style="-fx-background-color: red;" text="update" />
+                        <Button layoutX="248.0" layoutY="264.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="39.0" prefWidth="133.0" text="logout" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="StudentManage">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="studentList" layoutX="4.0" layoutY="-2.0" prefHeight="175.0" prefWidth="607.0" />
+                        <Button layoutX="95.0" layoutY="299.0" mnemonicParsing="false" onAction="#addStuAction" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: green;" text="add student" />
+                        <Button layoutX="249.0" layoutY="299.0" mnemonicParsing="false" onAction="#editStuAction" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: red;" text="update student" />
+                        <Button layoutX="399.0" layoutY="299.0" mnemonicParsing="false" onAction="#removeStuAction" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: yellow;" text="delete student" />
+                        <ChoiceBox fx:id="usernameChoiceBox" layoutX="233.0" layoutY="195.0" prefWidth="150.0" />
+                        <Label layoutX="127.0" layoutY="199.0" text="Select username:" />
+                        <Button layoutX="249.0" layoutY="238.0" mnemonicParsing="false" onAction="#queryStuAction" prefHeight="45.0" prefWidth="117.0" text="query student" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="CourseManage">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="courseList" layoutX="4.0" layoutY="-2.0" prefHeight="175.0" prefWidth="607.0" />
+                        <Button layoutX="157.0" layoutY="299.0" mnemonicParsing="false" onAction="#addCourseAction" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: green;" text="add course" />
+                        <Button layoutX="324.0" layoutY="299.0" mnemonicParsing="false" onAction="#removeCourseAction" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: yellow;" text="delete course" />
+                        <ChoiceBox fx:id="courseChoiceBox" layoutX="233.0" layoutY="195.0" prefWidth="150.0" />
+                        <Label layoutX="127.0" layoutY="199.0" text="Select course:" />
+                        <Button layoutX="249.0" layoutY="238.0" mnemonicParsing="false" onAction="#queryCourseAction" prefHeight="45.0" prefWidth="117.0" text="query course" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="GradesManage">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="gradesList" layoutX="4.0" layoutY="-2.0" prefHeight="175.0" prefWidth="607.0" />
+                        <Button layoutX="157.0" layoutY="299.0" mnemonicParsing="false" onAction="#addGradesAction" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: green;" text="add grades" />
+                        <Button layoutX="324.0" layoutY="299.0" mnemonicParsing="false" onAction="#removeGradesAction" prefHeight="45.0" prefWidth="117.0" style="-fx-background-color: yellow;" text="delete grades" />
+                        <ChoiceBox fx:id="studentNumberChoiceBox" layoutX="249.0" layoutY="195.0" prefWidth="150.0" />
+                        <Label layoutX="108.0" layoutY="199.0" text="Select studentNumber:" />
+                        <Button layoutX="249.0" layoutY="237.0" mnemonicParsing="false" onAction="#queryGradesAction" prefHeight="45.0" prefWidth="117.0" text="query grades" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
