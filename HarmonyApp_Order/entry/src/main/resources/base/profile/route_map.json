@@ -1,0 +1,60 @@
+{
+  "routerMap": [
+    {
+      "name": "Start",
+      "pageSourceFile": "src/main/ets/pages/start.ets",
+      "buildFunction": "StartBuilder",
+      "data": {
+        "description" : "Get start"
+      }
+    },
+    {
+      "name": "ShopPage",
+      "pageSourceFile": "src/main/ets/pages/customer/ShopPage.ets",
+      "buildFunction": "ShopPageBuilder",
+      "data": {
+        "description" : "商店"
+      }
+    },
+    {
+      "name": "Store",
+      "pageSourceFile": "src/main/ets/pages/store/store.ets",
+      "buildFunction": "storeBuilder",
+      "data": {
+        "description" : "商家"
+      }
+    },
+    {
+      "name": "Delivery",
+      "pageSourceFile": "src/main/ets/pages/delivery/delivery.ets",
+      "buildFunction": "deliveryBuilder",
+      "data": {
+        "description" : "骑手"
+      }
+    },
+    {
+      "name": "Customer",
+      "pageSourceFile": "src/main/ets/pages/customer/customer.ets",
+      "buildFunction": "customerBuilder",
+      "data": {
+        "description" : "用户界面"
+      }
+    },
+    {
+      "name": "Login",
+      "pageSourceFile": "src/main/ets/pages/login/login.ets",
+      "buildFunction": "LoginBuilder",
+      "data": {
+        "description" : "Main"
+      }
+    },
+    {
+      "name": "Register",
+      "pageSourceFile": "src/main/ets/pages/login/register.ets",
+      "buildFunction": "registerBuilder",
+      "data": {
+        "description" : "注册"
+      }
+    }
+  ]
+}
